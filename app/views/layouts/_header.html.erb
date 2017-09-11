@@ -1,0 +1,13 @@
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+        <div class="container">
+        <%= link_to "restaurant", root_path, id: "logo" %>
+        <div id="item-right"> <!-- class="nav justify-content-end"-->
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-link"><%= link_to "Home",  root_path %></li>
+                <li class="nav-link"><%= link_to "carte", root_path %></li>
+                <li class="nav-link"><%= link_to "reservation", reservation_path %></li>
+                <li class="nav-link"><%= link_to "sign up",   '#' %></li>
+            </ul>
+        </div>
+    </div>
+</nav>

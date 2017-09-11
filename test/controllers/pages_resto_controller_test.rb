@@ -8,27 +8,33 @@ class PagesRestoControllerTest < ActionDispatch::IntegrationTest
 
 
   test "should get home" do
-    get pages_resto_home_url
+    get root_path
     assert_response :success
     assert_select "title", "Home | #{@base_title}"
   end
 
   test "should get reservation" do
-    get pages_resto_reservation_url
+    get reservation_path    
     assert_response :success
     assert_select "title", "Reservation | #{@base_title}"
   end
 
   test "should get signup" do
-    get pages_resto_signup_url
+    get signup_path    
     assert_response :success
     assert_select "title", "Sign Up | #{@base_title}"
   end
 
   test "should get contact" do
-    get pages_resto_contact_url
+    get contact_path    
     assert_response :success
     assert_select "title", "Contact | #{@base_title}"
+  end
+
+  test "should get about" do
+    get about_path
+    assert_response :success
+    assert_select "title", "About | #{@base_title}"
   end
 
 end
