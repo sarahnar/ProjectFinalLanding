@@ -10,10 +10,13 @@
 
   <div class="field">
     <%= f.label :username %><br />
-    <%= f.text_field :username,cautofocus: true, :placeholder => 'Username' %>
+    <%= f.text_field :username, autofocus: true, :placeholder => 'Username' %>
   </div>
 
-  <%= f.email_field :email, :autofocus => true, :placeholder => 'Email address' %>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email %>
+  </div>
   
   <div class="field">
     <%= f.label :password %>
