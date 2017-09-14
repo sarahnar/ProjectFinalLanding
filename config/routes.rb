@@ -4,6 +4,10 @@ Rails.application.routes.draw do
     get "/signup" => "devise/registrations#new", as: "new_user_registration" # custom path to sign_up/registration
   end
   
+  devise_for controllers: {
+    sessions: 'users/sessions'
+  }
+
   devise_for :users
   get '/reservation', to: 'pages_resto#reservation'
   
